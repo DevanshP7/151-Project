@@ -1,0 +1,14 @@
+AFRAME.registerComponent('platform',{
+    schema:{
+        radius:{type:'number',default:1.5},
+        height:{type:'number',default:0.2}
+    },
+    init:function(){
+        this.el.setAttribute('geometry',{
+            primitive:'cylinder',
+            height:this.data.height,
+            radius:this.data.radius
+        })
+        this.el.setAttribute('material',{color:'red'})
+    }
+})
